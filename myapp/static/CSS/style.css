@@ -1,0 +1,267 @@
+/* Estilos generales */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background-image: url('../images/fondo.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(5, 4, 4);
+    text-align: center;
+    padding: 50px;
+}
+
+/* Ajuste de la sección hero para reducir el espacio */
+.hero {
+    min-height: 50vh; /* Reduce la altura de la sección */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0; /* Reduce el relleno superior e inferior */
+    margin-bottom: 0; /* Elimina espacio innecesario debajo */
+}
+
+/* Contenedor con fondo traslúcido */
+.hero .content {
+    background: rgba(255, 255, 255, 0.1); /* Fondo blanco con 70% de opacidad */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sutil sombra */
+}
+
+/* Fondo de las secciones con transparencia */
+.transparent-section {
+    background: rgba(255, 255, 255, 0.7); /* Fondo blanco con 70% de opacidad */
+    padding: 40px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sutil sombra */
+    margin-top: -20px; /* Reduce el espacio entre la sección anterior y esta */
+    margin-bottom: 20px;
+}
+
+/* Contenedor del perfil */
+.profile-container {
+    background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+    /* padding: 30px; */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    max-width: 600px; /* Ajuste del contenido */
+    
+}
+
+/* Imagen de perfil */
+.profile-img {
+    width: 250px; /* Ajusta el tamaño de la imagen */
+    height: 150px; /* Asegura que sea cuadrada */
+    object-fit: cover; /* Recorta la imagen para que se vea bien */
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-top: 20px;
+}
+
+/* Bordes redondeados en la barra de navegación */
+.navbar {
+    border-radius: 15px; /* Bordes redondeados */
+    margin: 10px; /* Añade un margen para que no toque los extremos */
+    padding: 10px 20px; /* Ajuste del espaciado interno */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+}
+
+
+/* Texto de presentación */
+.profile-text {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Sección de redes sociales */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+/* Botón de contacto */
+.contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#bookCarousel {
+    max-width: 300px; /* Ajusta el tamaño del carrusel */
+    margin: auto; /* Centrar el carrusel */
+}
+
+.carousel-item img {
+    max-height: 400px; /* Altura máxima de las imágenes */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.carousel-img {
+    height: 250px; /* Ajusta la altura según lo que prefieras */
+    object-fit: cover; /* Para que no se deforme y recorte bien */
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Justificar el texto dentro de las listas */
+ul {
+    text-align: justify;
+    list-style-position: inside; /* Asegura que los bullets estén alineados */
+    padding-left: 0; /* Reduce el espacio antes de los bullets */
+}
+
+h2 {
+    color: #9d2933;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Estilos para el PDF con scroll */
+.pdf-container {
+    overflow-y: scroll;
+    height: 500px; /* Ajusta la altura según prefieras */
+    border: 1px solid #ddd;
+}
+/* Estilos generales para las tarjetas de proyectos */
+.project-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Ajustar imágenes de los proyectos */
+.project-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Ajustar videos responsivos */
+.embed-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: black;
+}
+
+.embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Reducción del margen superior de la siguiente sección */
+.container.mt-4 {
+    margin-top: 20px !important;
+}
+
+/* Ajuste de la imagen de perfil para que no sea tan grande */
+img.rounded-circle {
+    max-width: 120px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; 
+}
+
+.education-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.education-text {
+    flex: 1;
+    padding-right: 20px;
+    min-width: 50%;
+}
+
+.education-video {
+    flex: 1;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.education-video iframe {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espacio entre el texto y el video */
+}
+
+.video-container iframe {
+    max-width: 45%; /* Ajusta el ancho del video */
+    height: auto;
+    border-radius: 10px;
+}
+
+.language-card {
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+.language-card:hover {
+    transform: scale(1.05);
+}
+
+.flag-img {
+    width: 100px;
+    margin: 10px auto;
+}
+
+.skills-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre imagen y texto */
+}
+
+.skills-img {
+    width: 300px; 
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-text {
+    flex: 1;
+}

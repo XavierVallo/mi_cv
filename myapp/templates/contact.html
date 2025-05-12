@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio - Mi CV</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <!-- Font Awesome para los iconos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- Estilos personalizados -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{% url 'home' %}">Mi CV</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'skills' %}">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+    </head>
+<body>
+    <!-- Boot JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Carrusel de imágenes de Madrid -->
+<div id="madridCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images/madrid1.jpg' %}" class="d-block w-100 carousel-img" alt="Madrid 1">
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/madrid2.jpg' %}" class="d-block w-100 carousel-img" alt="Madrid 2">
+        </div>
+    </div>
+</div>
+
+    <div class="container mt-5 transparent-section">
+        <div class="row align-items-center"> 
+        <h2>Formulario de Contacto</h2>
+
+        {% if messages %}
+            {% for message in messages %}
+                <p style="color: green;">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="text-justify">
+            <p><Strong>Ubicación:</Strong> principalmente Madrid (Barcelona, Girona).</p>
+        </div>
+        <div style="margin-top: 20px;">
+            <!-- <a href="https://www.linkedin.com/in/xavier-vall-llosera" target="_blank" class="btn btn-info">LinkedIn</a>  -->
+                <!-- Icono de LinkedIn -->
+            <a href="https://www.linkedin.com/in/xavier-vall-llosera" target="_blank" style="text-decoration: none;">
+                <i class="fa-brands fa-linkedin" style="font-size: 40px; color: #0077b5;"></i>
+            </a>
+
+             <!-- Icono de YouTube -->
+            <a href="https://www.youtube.com/@dataandhistory" target="_blank" style="text-decoration: none;">
+                <i class="fa-brands fa-youtube" style="font-size: 40px; color: #FF0000;"></i>
+            </a>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

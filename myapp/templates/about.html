@@ -1,0 +1,105 @@
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mi CV</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home' %}">Mi CV</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">Sobre Mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'skills' %}">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</head>
+
+<body>
+    <div class="container mt-5 transparent-section">
+        <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <div class="col-md-6 text-center">
+            <img src="{% static 'images/personal1.jpg' %}" class="img-fluid shadow-lg rounded" alt="Mi Foto">
+        </div>
+        <h2>Sobre Mí</h2>
+        <div class="text-justify">
+            <p>Soy un apasionado del análisis de datos, a la vez que me considero un humanista, debido a mi formación
+                inicial y a haber seguido formandome en ese ámbito a través de lecturas.
+                Por lo tanto, por esa doble dimensión me considero un humanista digital. Humanista por mi preocupación
+                por la historia y el pensamiento, y digital por mi inquietud informática y
+                estos años que ya llevo dedicandome a este ámbito.
+            </p>
+        </div>
+
+        <h2>Inquietud</h2>
+        <div class="text-justify">
+            <p>
+                Con 18 años fui a la Universidad de Navarra, Pamplona, a estudiar historia. ¿Por qué? Me movía el afan
+                de conocer en mayor profundidad la sociedad en la que vivimos
+                y el por qué de las acciones humanas. Eso me ha ayudado a conocer mejor a las personas y tener
+                consciencia de que todos tenemos una misión en la vida.
+            </p>
+        </div>
+        <h2>Intereses personales</h2>
+        <div class="text-justify">
+            <p>El tiempo que tengo para mi procuro invertirlo en mi desarrollo personal.
+                Por una parte me gusta la lectura. Leer sobre psicología, como sacar mi potencial, además de ensayos y
+                novelas.
+                También procuro tener tiempo para tratar las personas que conozco, y profundizar en nuestra amistad. Ya
+                que creo que las buenas relaciones
+                personales me ayuda a alcanzar una vida lograda.
+                Como tengo consciencia de que es importante cuidarse y llevar una vida sana voy al gimnasio y hago
+                ejercicio de forma regular. Y si de vez en cuando
+                puedo disfrutar de la naturaleza es algo muy gratificante para mi.
+            </p>
+        </div>
+        <h2>Grandes libros</h2>
+        <div class="text-justify">
+            <p>
+                Algunos de los grandes libros que me han marcado en mi lectura son:
+                <li> <i>Los cuatro amores</i> de C.S. Lewis, me parece interesante como aborda el aspecto de los diferentes amores que puede haber.</li>
+                <LI> <i>Retorno a Brideshead</i> de Evelyn Waugh por como trata el aspecto de la amistad y el trato humano.</LI>
+                <li> <i>Cuento de Navidad</i> de Charles Dickens. Sé que sencillamente es un cuento, pero tiene mucho contenido en sí, ya que habla del valor de la generosidad
+                y no dejarse llevar por los egoismos.</li>
+            </p>
+        </div>
+
+        <div id="bookCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/libro1.jpg' %}" class="d-block mx-auto img-fluid" alt="Libro 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/libro2.jpg' %}" class="d-block mx-auto img-fluid" alt="Libro 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/libro3.jpg' %}" class="d-block mx-auto img-fluid" alt="Libro 3">
+                </div>
+            </div>
+        
+            <!-- Controles de navegación -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+
+    </div>
+    </div>
+       
+    
+</body>
